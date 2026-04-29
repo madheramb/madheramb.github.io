@@ -1163,11 +1163,17 @@
     }
     .marquee-wrapper::before {
       left: 0;
-      background: linear-gradient(to right, var(--dark), transparent);
+      background: linear-gradient(to right, #0E0C0A, transparent);
     }
     .marquee-wrapper::after {
       right: 0;
-      background: linear-gradient(to left, var(--dark), transparent);
+      background: linear-gradient(to left, #0E0C0A, transparent);
+    }
+    body.dark-mode .marquee-wrapper::before {
+      background: linear-gradient(to right, #141210, transparent);
+    }
+    body.dark-mode .marquee-wrapper::after {
+      background: linear-gradient(to left, #141210, transparent);
     }
     .marquee-track {
       display: flex;
@@ -1698,7 +1704,7 @@
                   filter 0.3s ease;
     }
     .skill-card:hover .skill-card-icon {
-      transform: translateZ(20px) translateY(-4px) scale(1.2) rotateY(15deg);
+      transform: translateY(-4px) scale(1.15);
       filter: drop-shadow(0 4px 8px rgba(224,77,12,0.35));
     }
     .skill-card-body h4 {
@@ -3911,11 +3917,17 @@
     }
     .marquee-wrapper::before {
       left: 0;
-      background: linear-gradient(to right, var(--dark), transparent);
+      background: linear-gradient(to right, #0E0C0A, transparent);
     }
     .marquee-wrapper::after {
       right: 0;
-      background: linear-gradient(to left, var(--dark), transparent);
+      background: linear-gradient(to left, #0E0C0A, transparent);
+    }
+    body.dark-mode .marquee-wrapper::before {
+      background: linear-gradient(to right, #141210, transparent);
+    }
+    body.dark-mode .marquee-wrapper::after {
+      background: linear-gradient(to left, #141210, transparent);
     }
     .marquee-track {
       display: flex;
@@ -4446,7 +4458,7 @@
                   filter 0.3s ease;
     }
     .skill-card:hover .skill-card-icon {
-      transform: translateZ(20px) translateY(-4px) scale(1.2) rotateY(15deg);
+      transform: translateY(-4px) scale(1.15);
       filter: drop-shadow(0 4px 8px rgba(224,77,12,0.35));
     }
     .skill-card-body h4 {
@@ -7607,9 +7619,6 @@
     .color-name { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.2rem; }
     .color-hex { font-size: 0.72rem; color: var(--muted); font-family: monospace; }
     .color-usage { font-size: 0.68rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.4; }
-    .copy-tip { position: absolute; top: 0.6rem; right: 0.6rem; background: rgba(14,12,10,0.75); color: #F0EBE1; font-family: 'Syne', sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.2rem 0.5rem; border-radius: 100px; opacity: 0; transform: translateY(4px); transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none; }
-    .color-swatch:hover .copy-tip { opacity: 1; transform: translateY(0); }
-    .copy-tip.copied { background: rgba(74,222,128,0.9); color: #0a1a10; }
 
     /* ── TYPOGRAPHY ── */
     .type-specimen { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
@@ -7935,14 +7944,14 @@
           <div class="sg-section-header"><span class="sg-section-num">01</span><h2 class="sg-section-title">Colour Palette</h2></div>
           <p class="sg-desc">Warm, high-contrast. Ember (#E04D0C) appears on no more than 15% of any screen — it signals action, never decoration.</p>
           <div class="color-grid">
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#F0EBE1;"></div><div class="color-info"><div class="color-name">Cream</div><div class="color-hex">#F0EBE1</div><div class="color-usage">Primary background, light mode base</div></div></div>
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#0E0C0A;"></div><div class="color-info"><div class="color-name">Obsidian</div><div class="color-hex">#0E0C0A</div><div class="color-usage">Hero, nav (dark), footer, overlays</div></div></div>
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#E04D0C;"></div><div class="color-info"><div class="color-name">Ember</div><div class="color-hex">#E04D0C</div><div class="color-usage">Primary accent, CTAs, active states</div></div></div>
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#FF9D5C;"></div><div class="color-info"><div class="color-name">Ember Light</div><div class="color-hex">#FF9D5C</div><div class="color-usage">Gradient pairs with Ember</div></div></div>
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#1C1917;"></div><div class="color-info"><div class="color-name">Ink</div><div class="color-hex">#1C1917</div><div class="color-usage">Primary body text</div></div></div>
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#78716C;"></div><div class="color-info"><div class="color-name">Ash</div><div class="color-hex">#78716C</div><div class="color-usage">Secondary text, labels, captions</div></div></div>
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#FFFFFF;border:1px solid #eee;"></div><div class="color-info"><div class="color-name">Surface</div><div class="color-hex">#FFFFFF</div><div class="color-usage">Cards, cert strips, elevated layers</div></div></div>
-            <div class="color-swatch"><div class="copy-tip">Copy</div><div class="color-block" style="background:#1A1815;"></div><div class="color-info"><div class="color-name">Surface Dark</div><div class="color-hex">#1A1815</div><div class="color-usage">Cards on dark bg, dark mode surfaces</div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#F0EBE1;"></div><div class="color-info"><div class="color-name">Cream</div><div class="color-hex">#F0EBE1</div><div class="color-usage">Primary background, light mode base</div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#0E0C0A;"></div><div class="color-info"><div class="color-name">Obsidian</div><div class="color-hex">#0E0C0A</div><div class="color-usage">Hero, nav (dark), footer, overlays</div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#E04D0C;"></div><div class="color-info"><div class="color-name">Ember</div><div class="color-hex">#E04D0C</div><div class="color-usage">Primary accent, CTAs, active states</div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#FF9D5C;"></div><div class="color-info"><div class="color-name">Ember Light</div><div class="color-hex">#FF9D5C</div><div class="color-usage">Gradient pairs with <br>Ember</div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#1C1917;"></div><div class="color-info"><div class="color-name">Ink</div><div class="color-hex">#1C1917</div><div class="color-usage">Primary body text<br><span style="color: white;">.</span></div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#78716C;"></div><div class="color-info"><div class="color-name">Ash</div><div class="color-hex">#78716C</div><div class="color-usage">Secondary text, labels, captions</div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#FFFFFF;border:1px solid #eee;"></div><div class="color-info"><div class="color-name">Surface</div><div class="color-hex">#FFFFFF</div><div class="color-usage">Cards, cert strips, elevated layers</div></div></div>
+            <div class="color-swatch"><div class="color-block" style="background:#1A1815;"></div><div class="color-info"><div class="color-name">Surface Dark</div><div class="color-hex">#1A1815</div><div class="color-usage">Cards on dark bg, dark mode surfaces</div></div></div>
           </div>
         </section>
 
@@ -8394,34 +8403,6 @@
 
       // Safety-net: if something still invisible after 3 s (slow srcdoc), reveal it
       setTimeout(function() { sections.forEach(function(s) { s.classList.add('visible'); }); }, 3000);
-
-      /* ── 2. COLOUR SWATCH COPY HEX ── */
-      document.querySelectorAll('.color-swatch').forEach(function(swatch) {
-        var hexEl = swatch.querySelector('.color-hex');
-        var tip   = swatch.querySelector('.copy-tip');
-        if (!hexEl || !tip) return;
-        swatch.addEventListener('click', function() {
-          var hex = hexEl.textContent.trim();
-          function showCopied() {
-            tip.textContent = 'Copied!'; tip.classList.add('copied');
-            setTimeout(function() { tip.textContent = 'Copy'; tip.classList.remove('copied'); }, 1500);
-          }
-          function fallbackCopy() {
-            var ta = document.createElement('textarea');
-            ta.value = hex;
-            ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;width:1px;height:1px;';
-            document.body.appendChild(ta);
-            ta.focus(); ta.select();
-            try { document.execCommand('copy'); showCopied(); } catch(e) { tip.textContent = hex; setTimeout(function(){tip.textContent='Copy';},2000); }
-            document.body.removeChild(ta);
-          }
-          if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
-            navigator.clipboard.writeText(hex).then(showCopied).catch(fallbackCopy);
-          } else {
-            fallbackCopy();
-          }
-        });
-      });
 
       /* ── 3. SPACING BARS GROW IN ── */
       var spacingSection = document.getElementById('spacing');
