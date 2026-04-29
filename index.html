@@ -7473,21 +7473,21 @@
         wordEl.style.opacity   = '0';
         wordEl.style.transform = 'translateY(50px)';
 
-        animateIn(wordEl, 320, function() {
+        animateIn(wordEl, 180, function() {
           // Hold, then animate out
           setTimeout(function() {
-            animateOut(wordEl, 220, function() {
+            animateOut(wordEl, 130, function() {
               if (idx + 1 < words.length) showWord(idx + 1);
               else revealSite();
             });
-          }, 400);
+          }, 220);
         });
       }
 
       function revealSite() {
         const start = performance.now();
         (function fade(now) {
-          const p = Math.min((now - start) / 550, 1);
+          const p = Math.min((now - start) / 350, 1);
           loader.style.opacity = 1 - p;
           if (p < 1) requestAnimationFrame(fade);
           else {
@@ -7501,7 +7501,7 @@
       wordEl.style.opacity   = '0';
       wordEl.style.transform = 'translateY(50px)';
 
-      setTimeout(function() { showWord(0); }, 250);
+      setTimeout(function() { showWord(0); }, 100);
     })();
   </script>
 
