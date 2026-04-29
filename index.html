@@ -8508,5 +8508,174 @@
     Portfolio
   </button>
 
+  <!-- ── 404 OVERLAY ─────────────────────────────────────────── -->
+  <style>
+    #page-404 {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #F0EBE1;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem;
+      overflow: hidden;
+    }
+    #page-404.open { display: flex; }
+    #page-404 .p4-bg-number {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(180px, 30vw, 360px);
+      color: rgba(14,12,10,0.04);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+      letter-spacing: -0.04em;
+    }
+    #page-404 .p4-card {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      border: 1px solid rgba(14,12,10,0.08);
+      border-radius: 28px;
+      padding: 3rem 3.5rem;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(14,12,10,0.07);
+      animation: p4FloatIn 0.6s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    @keyframes p4FloatIn {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    #page-404 .p4-logo {
+      display: inline-block;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+    #page-404 .p4-logo img { height: 36px; width: auto; }
+    #page-404 .p4-bar {
+      width: 36px; height: 3px;
+      background: #E04D0C;
+      border-radius: 99px;
+      margin: 0 auto 1.5rem;
+      animation: p4GrowBar 0.5s 0.3s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    @keyframes p4GrowBar {
+      from { width: 0; opacity: 0; }
+      to   { width: 36px; opacity: 1; }
+    }
+    #page-404 .p4-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #E04D0C;
+      margin-bottom: 0.75rem;
+    }
+    #page-404 h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.25rem);
+      font-weight: 800;
+      color: #0E0C0A;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    #page-404 p {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 0.9rem;
+      color: #78716C;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    #page-404 .p4-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #E04D0C;
+      color: #fff;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 99px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(224,77,12,0.25);
+    }
+    #page-404 .p4-btn:hover {
+      background: #BA3F08;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(224,77,12,0.35);
+    }
+    #page-404 .p4-btn svg { transition: transform 0.2s ease; }
+    #page-404 .p4-btn:hover svg { transform: translateX(-3px); }
+    #page-404 .p4-footer {
+      position: fixed;
+      bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Epilogue', sans-serif;
+      font-size: 0.72rem;
+      color: #78716C;
+      opacity: 0.6;
+      white-space: nowrap;
+    }
+    @media (max-width: 480px) {
+      #page-404 .p4-card { padding: 2.25rem 1.75rem; }
+    }
+  </style>
+
+  <div id="page-404" role="alert" aria-label="Page not found">
+    <div class="p4-bg-number" aria-hidden="true">404</div>
+    <div class="p4-card">
+      <a class="p4-logo" onclick="close404()" aria-label="Back to portfolio">
+        <img src="https://madheramb.ca/assets/imgs/new_logo.svg" alt="HP" />
+      </a>
+      <div class="p4-bar"></div>
+      <p class="p4-label">Error 404</p>
+      <h1>This page took a<br/>wrong turn.</h1>
+      <p>The page you're looking for doesn't exist, was moved, or never made it past the wireframe stage.</p>
+      <button class="p4-btn" onclick="close404()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Portfolio
+      </button>
+    </div>
+    <span class="p4-footer">© 2026 madheramb🐺</span>
+  </div>
+
+  <script>
+    function close404() {
+      document.getElementById('page-404').classList.remove('open');
+      document.body.style.overflow = '';
+      // Clean the URL without reload
+      if (window.history && window.history.replaceState) {
+        var clean = window.location.pathname.replace(/\/404\/?$/, '/');
+        window.history.replaceState(null, '', clean);
+      }
+    }
+    // Show if URL path ends in /404 or has ?404 query
+    (function() {
+      var path  = window.location.pathname;
+      var query = window.location.search;
+      if (path.match(/\/404\/?$/) || query.indexOf('404') !== -1) {
+        document.getElementById('page-404').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    })();
+  </script>
+
 </body>
 </html>
