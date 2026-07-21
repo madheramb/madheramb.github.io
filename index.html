@@ -7056,13 +7056,21 @@
     })();
 
     /* ── SCROLL PROGRESS BAR ────────────────────────────────── */
-    const progressBar = document.getElementById('scroll-progress');
-    window.addEventListener('scroll', () => {
-      const scrollTop  = window.scrollY || document.documentElement.scrollTop;
-      const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
-      const pct        = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      progressBar.style.width = pct + '%';
-    }, { passive: true });
+       /* ── MARQUEE: Pause on touch (mobile has no :hover) ──────── */
+    (function () {
+      const track = document.getElementById('marqueeTrack');
+      if (!track) return;
+
+      track.addEventListener('touchstart', () => {
+        track.style.animationPlayState = 'paused';
+      }, { passive: true });
+
+      track.addEventListener('touchend', () => {
+        setTimeout(() => {
+          track.style.animationPlayState = 'running';
+        }, 2000);
+      }, { passive: true });
+    })();
 
     /* ── DARK MODE TOGGLE ────────────────────────────────────── */
     const darkBtn  = document.getElementById('dark-toggle');
