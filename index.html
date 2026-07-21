@@ -6,7 +6,21 @@
   <meta name="description" content="Heramb Pawar — UI/UX Designer crafting human-centered digital experiences. Explore case studies in product design, UX research, and interaction design." />
   <meta name="keywords" content="UI UX Designer Toronto, Product Designer, UX Portfolio, Figma, Interaction Design, Heramb Pawar" />
   <title>Heramb Pawar — UX/UI Designer</title>
+  <link rel="canonical" href="https://www.madheramb.com/" />
 <link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.madheramb.com/" />
+  <meta property="og:title" content="Heramb Pawar — UX/UI Designer" />
+  <meta property="og:description" content="Heramb Pawar — UI/UX Designer crafting human-centered digital experiences. Explore case studies in product design, UX research, and interaction design." />
+  <meta property="og:image" content="https://madheramb.com/assets/imgs/Heramb.png" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Heramb Pawar — UX/UI Designer" />
+  <meta name="twitter:description" content="Heramb Pawar — UI/UX Designer crafting human-centered digital experiences. Explore case studies in product design, UX research, and interaction design." />
+  <meta name="twitter:image" content="https://madheramb.com/assets/imgs/Heramb.png" />
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -5635,7 +5649,25 @@
     }
     #sg-close-btn:hover { background: rgba(224,77,12,0.85); color: #fff; border-color: transparent; }
     #sg-close-btn.visible { display: flex; }
+
+    /* ─── CURSOR ACCESSIBILITY FALLBACK ──────────────────────────
+       The custom dot/ring cursor above only makes sense on devices
+       with a fine pointer that fires mousemove. On touch devices,
+       or if JS fails to run, force the native cursor back on so
+       the page is never left with no visible pointer at all. ── */
+    @media (hover: none), (pointer: coarse) {
+      html, body, a, button, input, textarea, select, * {
+        cursor: auto !important;
+      }
+      #cursor-dot, #cursor-ring { display: none !important; }
+    }
   </style>
+  <noscript>
+    <style>
+      body, a, button { cursor: auto !important; }
+      #cursor-dot, #cursor-ring { display: none !important; }
+    </style>
+  </noscript>
 </head>
 
 <body class="loading">
@@ -5661,13 +5693,13 @@
     <a href="#portfolio" onclick="closeMobileNav()">Work</a>
     <a href="#experience" onclick="closeMobileNav()">Experience</a>
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
-    <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/view?usp=sharing" target="_blank" style="color: var(--accent);">Download CV ↗</a>
+    <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Download CV ↗</a>
   </div>
 
   <!-- NAV -->
   <nav id="mainNav">
     <a href="#home" class="nav-logo">
-      <img src="https://madheramb.ca/assets/imgs/new_logo.svg" alt="HP" />
+      <img src="https://madheramb.com/assets/imgs/new_logo.svg" alt="HP" />
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -5682,7 +5714,7 @@
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         Design System
       </a>
-      <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/view?usp=sharing" target="_blank" class="btn-primary">
+      <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary">
         Download CV
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg>
       </a>
@@ -5692,6 +5724,8 @@
       </button>
     </div>
   </nav>
+
+  <main>
 
   <!-- ── HERO ──────────────────────────────────────────────── -->
   <section id="home">
@@ -5736,7 +5770,7 @@
       <div class="hero-image-wrap reveal reveal-delay-2">
         <div class="hero-image-bg"></div>
         <div class="hero-image-ring"></div>
-        <img src="https://madheramb.ca/assets/imgs/Heramb.png" alt="Heramb Pawar" class="hero-img" />
+        <img src="https://madheramb.com/assets/imgs/Heramb.png" alt="Heramb Pawar" class="hero-img" />
         
       </div>
     </div>
@@ -5757,7 +5791,7 @@
           <p class="about-desc reveal reveal-delay-3">
             Design is my lens to understand people and improve their lives. I don't chase trends — I chase insights. My work is rooted in empathy, validated by research, and refined through feedback.
           </p>
-          <a href="https://www.linkedin.com/in/herambpawar/" target="_blank" class="about-link reveal reveal-delay-4">
+          <a href="https://www.linkedin.com/in/herambpawar/" target="_blank" rel="noopener noreferrer" class="about-link reveal reveal-delay-4">
             Connect on LinkedIn
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -6155,7 +6189,7 @@
         <div class="section-label">Selected Work</div>
         <h2 class="portfolio-headline">Projects that<br/>solve <span style="color:#E04D0C;">real problems</span>.</h2>
       </div>
-      <a href="https://www.behance.net/madheramb" target="_blank" class="btn-ghost">
+      <a href="https://www.behance.net/madheramb" target="_blank" rel="noopener noreferrer" class="btn-ghost">
         View All on Behance
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
       </a>
@@ -6168,7 +6202,7 @@
         <!-- Slide 1: PAWS -->
         <div class="showcase-slide active" data-index="0">
           <div class="slide-image-pane">
-            <img src="https://madheramb.ca/assets/imgs/PAWS_V2.png" alt="PAWS Pet Care Platform" loading="lazy" />
+            <img src="https://madheramb.com/assets/imgs/PAWS_V2.png" alt="PAWS Pet Care Platform" loading="lazy" />
           </div>
           <div class="slide-content-pane">
             <span class="slide-num">01</span>
@@ -6176,7 +6210,7 @@
             <h3 class="slide-title">PAWS — Pet Care Platform</h3>
             <p class="slide-desc">A comprehensive web app for busy pet owners: profiles, vet bookings, grooming, shopping — all in one seamless experience.</p>
             
-            <a href="https://www.behance.net/gallery/202455491/PAWs-UI-UX-Case-Study" target="_blank" class="slide-cta">
+            <a href="https://www.behance.net/gallery/202455491/PAWs-UI-UX-Case-Study" target="_blank" rel="noopener noreferrer" class="slide-cta">
               View Case Study
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -6186,7 +6220,7 @@
         <!-- Slide 2: Elderly Watch -->
         <div class="showcase-slide" data-index="1">
           <div class="slide-image-pane">
-            <img src="https://madheramb.ca/assets/imgs/ELDERRRLY.png" alt="Elderly Watch" loading="lazy" />
+            <img src="https://madheramb.com/assets/imgs/ELDERRRLY.png" alt="Elderly Watch" loading="lazy" />
           </div>
           <div class="slide-content-pane">
             <span class="slide-num">02</span>
@@ -6194,7 +6228,7 @@
             <h3 class="slide-title">Elderly Watch</h3>
             <p class="slide-desc">Health monitoring for elderly users, caregivers, and providers — vital signs, medications, emergency alerts in one unified experience.</p>
             
-            <a href="https://www.behance.net/gallery/179338931/Elderly-Watch" target="_blank" class="slide-cta">
+            <a href="https://www.behance.net/gallery/179338931/Elderly-Watch" target="_blank" rel="noopener noreferrer" class="slide-cta">
               View Case Study
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -6204,7 +6238,7 @@
         <!-- Slide 3: Hive Builds -->
         <div class="showcase-slide" data-index="2">
           <div class="slide-image-pane">
-            <img src="https://madheramb.ca/assets/imgs/HIVVEE.png" alt="Hive Builds" loading="lazy" />
+            <img src="https://madheramb.com/assets/imgs/HIVVEE.png" alt="Hive Builds" loading="lazy" />
           </div>
           <div class="slide-content-pane">
             <span class="slide-num">03</span>
@@ -6212,7 +6246,7 @@
             <h3 class="slide-title">Hive Builds</h3>
             <p class="slide-desc">Smart building management platform for optimizing devices, energy, and operations in commercial spaces.</p>
            
-            <a href="https://www.behance.net/gallery/176581725/HiveBuilds" target="_blank" class="slide-cta">
+            <a href="https://www.behance.net/gallery/176581725/HiveBuilds" target="_blank" rel="noopener noreferrer" class="slide-cta">
               View Case Study
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -6222,7 +6256,7 @@
         <!-- Slide 4: Cyberstruct -->
         <div class="showcase-slide" data-index="3">
           <div class="slide-image-pane">
-            <img src="https://madheramb.ca/assets/imgs/CYYYBER.png" alt="Cyberstruct" loading="lazy" />
+            <img src="https://madheramb.com/assets/imgs/CYYYBER.png" alt="Cyberstruct" loading="lazy" />
           </div>
           <div class="slide-content-pane">
             <span class="slide-num">04</span>
@@ -6230,7 +6264,7 @@
             <h3 class="slide-title">Cyberstruct</h3>
             <p class="slide-desc">Construction app revolutionizing project management with real-time updates and seamless team communication on site and off.</p>
            
-            <a href="https://www.behance.net/gallery/175002565/Cyberstruct" target="_blank" class="slide-cta">
+            <a href="https://www.behance.net/gallery/175002565/Cyberstruct" target="_blank" rel="noopener noreferrer" class="slide-cta">
               View Case Study
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -6240,7 +6274,7 @@
         <!-- Slide 5: Trucker -->
         <div class="showcase-slide" data-index="4">
           <div class="slide-image-pane">
-            <img src="https://madheramb.ca/assets/imgs/Screenshot%202024-08-07%20at%205.40.37%E2%80%AFPM.png" alt="Trucker" loading="lazy" />
+            <img src="https://madheramb.com/assets/imgs/Screenshot%202024-08-07%20at%205.40.37%E2%80%AFPM.png" alt="Trucker" loading="lazy" />
           </div>
           <div class="slide-content-pane">
             <span class="slide-num">05</span>
@@ -6248,7 +6282,7 @@
             <h3 class="slide-title">Trucker</h3>
             <p class="slide-desc">Better truck booking experiences — users can filter, compare, and book based on specific needs and routes across Canada.</p>
             
-            <a href="https://www.behance.net/gallery/123443765/Trucker" target="_blank" class="slide-cta">
+            <a href="https://www.behance.net/gallery/123443765/Trucker" target="_blank" rel="noopener noreferrer" class="slide-cta">
               View Case Study
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -6296,7 +6330,7 @@
           <div class="section-label reveal">Experience</div>
           <h2 class="exp-headline reveal reveal-delay-1">Every <span style="color:#E04D0C;">role</span><br/>shaped my <span style="color:#E04D0C;">craft</span>.</h2>
           <p class="exp-sub reveal reveal-delay-2">From Scarborough pharmacies to New Hampshire tech companies — I've designed across industries, scales, and continents.</p>
-          <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/   view?usp=sharing" target="_blank" class="btn-primary reveal reveal-delay-3" style="width: fit-content;">
+          <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary reveal reveal-delay-3" style="width: fit-content;">
             Download Full CV
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg>
           </a>
@@ -6311,7 +6345,7 @@
             </div>
             <div class="exp-content">
               <div class="exp-company-row">
-                <img src="https://madheramb.ca/assets/imgs/1_SC_PHARMACY_LOGO_PRIMARY%20(1).jpg" alt="Seamless Care" class="exp-logo" />
+                <img src="https://madheramb.com/assets/imgs/1_SC_PHARMACY_LOGO_PRIMARY%20(1).jpg" alt="Seamless Care" class="exp-logo" />
                 <div class="exp-meta">
                   <strong>Seamless Care Pharmacy</strong>
                   <span>Scarborough, Ontario, Canada</span>
@@ -6339,7 +6373,7 @@
             </div>
             <div class="exp-content">
               <div class="exp-company-row">
-                <img src="https://madheramb.ca/assets/imgs/CCA%20Logo%20Website%20Header.png" alt="CCA" class="exp-logo" />
+                <img src="https://madheramb.com/assets/imgs/CCA%20Logo%20Website%20Header.png" alt="CCA" class="exp-logo" />
                 <div class="exp-meta">
                   <strong>CCA Member Solutions</strong>
                   <span>Manchester, New Hampshire, USA</span>
@@ -6367,7 +6401,7 @@
             </div>
             <div class="exp-content">
               <div class="exp-company-row">
-                <img src="https://madheramb.ca/assets/imgs/Texas-AM-University-Kingsville-logo.jpg" alt="TAMUK" class="exp-logo" />
+                <img src="https://madheramb.com/assets/imgs/Texas-AM-University-Kingsville-logo.jpg" alt="TAMUK" class="exp-logo" />
                 <div class="exp-meta">
                   <strong>Texas A&M University–Kingsville</strong>
                   <span>Kingsville, Texas, USA</span>
@@ -6394,7 +6428,7 @@
             </div>
             <div class="exp-content">
               <div class="exp-company-row">
-                <img src="https://madheramb.ca/assets/imgs/20221230110837.png" alt="SKN" class="exp-logo" />
+                <img src="https://madheramb.com/assets/imgs/20221230110837.png" alt="SKN" class="exp-logo" />
                 <div class="exp-meta">
                   <strong>SKN Sinhgad Institute</strong>
                   <span>Lonavala, Maharashtra, India</span>
@@ -6427,7 +6461,7 @@
       <div class="section-label reveal" style="margin-bottom:1.5rem; font-size:0.65rem;">Formal Education</div>
       <div class="edu-grid">
         <div class="edu-card reveal">
-          <img src="https://madheramb.ca/assets/imgs/AC_logo.png" alt="Algonquin College" class="edu-logo" />
+          <img src="https://madheramb.com/assets/imgs/AC_logo.png" alt="Algonquin College" class="edu-logo" />
           <div class="edu-body">
             <div class="edu-degree">Postgraduate Degree</div>
             <div class="edu-school">Algonquin College</div>
@@ -6436,7 +6470,7 @@
           </div>
         </div>
         <div class="edu-card reveal reveal-delay-1">
-          <img src="https://madheramb.ca/assets/imgs/logo-conestoga-college.png" alt="Conestoga College" class="edu-logo" />
+          <img src="https://madheramb.com/assets/imgs/logo-conestoga-college.png" alt="Conestoga College" class="edu-logo" />
           <div class="edu-body">
             <div class="edu-degree">Postgraduate Degree</div>
             <div class="edu-school">Conestoga College</div>
@@ -6445,7 +6479,7 @@
           </div>
         </div>
         <div class="edu-card reveal reveal-delay-2">
-          <img src="https://madheramb.ca/assets/imgs/Texas_A&M_University%E2%80%93Kingsville_seal.svg.png" alt="Texas A&M" class="edu-logo" />
+          <img src="https://madheramb.com/assets/imgs/Texas_A&M_University%E2%80%93Kingsville_seal.svg.png" alt="Texas A&M" class="edu-logo" />
           <div class="edu-body">
             <div class="edu-degree">Master of Science</div>
             <div class="edu-school">Texas A&M University–Kingsville</div>
@@ -6454,7 +6488,7 @@
           </div>
         </div>
         <div class="edu-card reveal reveal-delay-3">
-          <img src="https://madheramb.ca/assets/imgs/Savitribai_Phule_Pune_University_Logo.png" alt="Savitribai Phule Pune University" class="edu-logo" />
+          <img src="https://madheramb.com/assets/imgs/Savitribai_Phule_Pune_University_Logo.png" alt="Savitribai Phule Pune University" class="edu-logo" />
           <div class="edu-body">
             <div class="edu-degree">Bachelor of Engineering</div>
             <div class="edu-school">Savitribai Phule Pune University</div>
@@ -6521,7 +6555,7 @@
       </div>
     </div>
     <div class="certs-cta reveal">
-      <a href="https://www.linkedin.com/in/herambpawar/details/certifications/" target="_blank" class="btn-outline">
+      <a href="https://www.linkedin.com/in/herambpawar/details/certifications/" target="_blank" rel="noopener noreferrer" class="btn-outline">
         View All Certifications
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
       </a>
@@ -6538,7 +6572,7 @@
 
         <!-- ── Featured: Hackathon ── -->
         <div class="award-featured reveal">
-          <img src="https://madheramb.ca/assets/imgs/Hack.jpeg" alt="HACK-UTD19 Hackathon" class="award-featured-img" />
+          <img src="https://madheramb.com/assets/imgs/Hack.jpeg" alt="HACK-UTD19 Hackathon" class="award-featured-img" />
           <!-- Rank badge -->
           <div class="award-rank-badge">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -6549,7 +6583,7 @@
             <div class="award-featured-org">JP Morgan Chase Challenge &nbsp;·&nbsp; Feb 2019</div>
             <div class="award-featured-title">Hackathon<br/>HACK-UTD19</div>
             <div class="award-featured-date">University of Texas at Dallas</div>
-            <a href="https://devpost.com/software/helping-hands-caxrz5#updates" target="_blank" class="award-featured-link">
+            <a href="https://devpost.com/software/helping-hands-caxrz5#updates" target="_blank" rel="noopener noreferrer" class="award-featured-link">
               View Project
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -6558,30 +6592,30 @@
 
         <!-- ── Cert 1: Google UX ── -->
         <div class="award-cert reveal reveal-delay-1">
-          <img src="https://madheramb.ca/assets/imgs/google-ux-design-professional-certificate.2.png" alt="Google UX Certificate" class="award-cert-logo" />
+          <img src="https://madheramb.com/assets/imgs/google-ux-design-professional-certificate.2.png" alt="Google UX Certificate" class="award-cert-logo" />
           <div class="award-cert-body">
             <div class="award-cert-title">Google UX Design Professional Certificate</div>
             <div class="award-cert-issuer">Issued by Coursera &nbsp;·&nbsp; Google</div>
-            <a href="https://www.credly.com/badges/f7ed4f4a-9173-4468-97b6-c787630cb290/public_url" target="_blank" class="award-cert-link">
+            <a href="https://www.credly.com/badges/f7ed4f4a-9173-4468-97b6-c787630cb290/public_url" target="_blank" rel="noopener noreferrer" class="award-cert-link">
               View Badge →
             </a>
           </div>
-          <a href="https://www.credly.com/badges/f7ed4f4a-9173-4468-97b6-c787630cb290/public_url" target="_blank" class="award-cert-arrow" aria-label="View Google UX Badge">
+          <a href="https://www.credly.com/badges/f7ed4f4a-9173-4468-97b6-c787630cb290/public_url" target="_blank" rel="noopener noreferrer" class="award-cert-arrow" aria-label="View Google UX Badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
 
         <!-- ── Cert 2: FITT ── -->
         <div class="award-cert reveal reveal-delay-2">
-          <img src="https://madheramb.ca/assets/imgs/fitt-diploma-in-international-trade.png" alt="FITT Diploma" class="award-cert-logo" />
+          <img src="https://madheramb.com/assets/imgs/fitt-diploma-in-international-trade.png" alt="FITT Diploma" class="award-cert-logo" />
           <div class="award-cert-body">
             <div class="award-cert-title">FITT Diploma in International Trade</div>
             <div class="award-cert-issuer">Forum for International Trade Training</div>
-            <a href="https://www.credly.com/badges/02a27e95-1465-4efc-b0bd-9249e7282490/public_url" target="_blank" class="award-cert-link">
+            <a href="https://www.credly.com/badges/02a27e95-1465-4efc-b0bd-9249e7282490/public_url" target="_blank" rel="noopener noreferrer" class="award-cert-link">
               View Badge →
             </a>
           </div>
-          <a href="https://www.credly.com/badges/02a27e95-1465-4efc-b0bd-9249e7282490/public_url" target="_blank" class="award-cert-arrow" aria-label="View FITT Badge">
+          <a href="https://www.credly.com/badges/02a27e95-1465-4efc-b0bd-9249e7282490/public_url" target="_blank" rel="noopener noreferrer" class="award-cert-arrow" aria-label="View FITT Badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -6659,6 +6693,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <footer>
     <div class="container">
@@ -6672,19 +6708,19 @@
       <div class="footer-inner">
         <div class="footer-left">
           <div class="footer-logo">
-            <img src="https://madheramb.ca/assets/imgs/new_logo.svg" alt="HP" />
+            <img src="https://madheramb.com/assets/imgs/new_logo.svg" alt="HP" />
           </div>
           <div class="footer-copy">© 2026 madheramb🐺.</div>
         </div>
 
-        <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/view?usp=sharing" target="_blank" class="footer-avail" style="text-decoration:none;">
+        <a href="https://drive.google.com/file/d/1x7BEgb_y09O8i3NxUt0x7tHBwmc40VIb/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-avail" style="text-decoration:none;">
           <span class="footer-avail-dot"></span>
           Open to opportunities
         </a>
 
         <div class="footer-links">
-          <a href="https://www.behance.net/madheramb" target="_blank">Behance</a>
-          <a href="https://www.linkedin.com/in/herambpawar/" target="_blank">LinkedIn</a>
+          <a href="https://www.behance.net/madheramb" target="_blank" rel="noopener noreferrer">Behance</a>
+          <a href="https://www.linkedin.com/in/herambpawar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:madheramb@gmail.com">Email</a>
         </div>
       </div>
@@ -7908,8 +7944,8 @@
         Back to Portfolio
       </a>
       <div class="sg-eyebrow">Design System</div>
-      <h1 class="sg-title"><span style="font-size: 24px;">madheramb.ca</span><br/>Style <span style="color: #E04D0C;">Guide</span></h1>
-      <p class="sg-subtitle">The visual language, component library, and design tokens behind madheramb.ca — every decision documented.</p>
+      <h1 class="sg-title"><span style="font-size: 24px;">madheramb.com</span><br/>Style <span style="color: #E04D0C;">Guide</span></h1>
+      <p class="sg-subtitle">The visual language, component library, and design tokens behind madheramb.com — every decision documented.</p>
       <div class="sg-meta-row">
         <div class="sg-meta"><span class="sg-meta-label">Version</span><span class="sg-meta-value">v2.0 — 2026</span></div>
         <div class="sg-meta"><span class="sg-meta-label">Designer</span><span class="sg-meta-value">Heramb Pawar</span></div>
@@ -8002,7 +8038,7 @@
         <!-- 04 COMPONENTS -->
         <section class="sg-section" id="components">
           <div class="sg-section-header"><span class="sg-section-num">04</span><h2 class="sg-section-title">Portfolio Components</h2></div>
-          <p class="sg-desc">Every UI pattern used on madheramb.ca — documented with live demos.</p>
+          <p class="sg-desc">Every UI pattern used on madheramb.com — documented with live demos.</p>
 
           <!-- Section label -->
           <div class="comp-group">
@@ -8280,7 +8316,7 @@
             </div>
             <div class="state-col">
               <span class="state-label">Success</span>
-              <input class="s-input-success" type="email" value="hi@madheramb.ca" readonly />
+              <input class="s-input-success" type="email" value="hi@madheramb.com" readonly />
               <div class="input-msg success">Looks good!</div>
             </div>
           </div>
@@ -8356,7 +8392,7 @@
       <!-- Left: logo + copyright -->
       <div class="sg-footer-left">
         <div class="sg-footer-logo">
-          <img src="https://madheramb.ca/assets/imgs/new_logo.svg" alt="HP" />
+          <img src="https://madheramb.com/assets/imgs/new_logo.svg" alt="HP" />
         </div>
         <span class="sg-footer-copy">© 2026 madheramb🐺 </span>
       </div>
@@ -8369,8 +8405,8 @@
 
       <!-- Right: links -->
       <div class="sg-footer-links">
-        <a href="https://www.behance.net/madheramb" target="_blank">Behance</a>
-        <a href="https://www.linkedin.com/in/herambpawar/" target="_blank">LinkedIn</a>
+        <a href="https://www.behance.net/madheramb" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://www.linkedin.com/in/herambpawar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="mailto:madheramb@gmail.com">Email</a>
       </div>
 
